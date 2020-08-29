@@ -131,3 +131,57 @@ xlabel('Time(t)'); ylabel('Velocity(vb)');
 title('Spring Mass System (Changing Mass M2)');
 legend('M2 = 50','M2 = 250','M2 = 450','M2 = 650');
 grid; hold off;
+
+% Changing value of dampers (B1)
+% When B1 = 5
+[t1,x1]=ode45('case4_B1_is_5',[0 400],[0;0;0;0]);
+% When B1 = 10
+[t2,x2]=ode45('case4_B1_is_10',[0 400],[0;0;0;0]);
+% When B1 = 15
+[t3,x3]=ode45('case4_B1_is_15',[0 400],[0;0;0;0]);
+% When B1 = 20
+[t4,x4]=ode45('case4_B1_is_20',[0 400],[0;0;0;0]);
+figure
+subplot(2,1,1); hold on;
+plot(t1,x1(:,1),'LineWidth',2);
+plot(t2,x2(:,1),'LineWidth',2);
+plot(t3,x3(:,1),'LineWidth',2);
+plot(t4,x4(:,1),'LineWidth',2);
+xlabel('Time(t)'); ylabel('Displacement(xa)');
+title('Spring Mass System (Changing Damper B1)');
+legend('B1 = 5','B1 = 10','B1 = 15','B1 = 20');
+grid; hold off;
+
+subplot(2,1,2); hold on
+plot(t1,x1(:,2),'LineWidth',2)
+plot(t2,x2(:,2),'LineWidth',2)
+plot(t3,x3(:,2),'LineWidth',2)
+plot(t4,x4(:,2),'LineWidth',2)
+hold off;
+xlabel('Time(t)'); ylabel('Velocity(va)');
+title('Spring Mass System (Changing Damper B1)');
+legend('B1 = 5','B1 = 10','B1 = 15','B1 = 20');
+grid; hold off;
+
+figure
+subplot(2,1,1); hold on;
+plot(t1,x1(:,3),'LineWidth',2);
+plot(t2,x2(:,3),'LineWidth',2);
+plot(t3,x3(:,3),'LineWidth',2);
+plot(t4,x4(:,3),'LineWidth',2);
+xlabel('Time(t)'); ylabel('Displacement(xb)');
+title('Spring Mass System (Changing Damper B1)');
+legend('B1 = 5','B1 = 10','B1 = 15','B1 = 20');
+grid; hold off;
+
+subplot(2,1,2); hold on
+plot(t1,x1(:,4),'LineWidth',2)
+plot(t2,x2(:,4),'LineWidth',2)
+plot(t3,x3(:,4),'LineWidth',2)
+plot(t4,x4(:,4),'LineWidth',2)
+hold off;
+xlabel('Time(t)'); ylabel('Velocity(vb)');
+title('Spring Mass System (Changing Damper B1)');
+legend('B1 = 5','B1 = 10','B1 = 15','B1 = 20');
+grid; hold off;
+
