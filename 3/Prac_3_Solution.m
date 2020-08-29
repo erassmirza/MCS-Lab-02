@@ -26,15 +26,15 @@ xlabel('Time(t)'); ylabel('Displacement(xb), Velocity(vb)');
 title('Spring Mass System'); legend('xb','vb');
 grid; hold off;
 
-% Changing value of masses
+% Changing value of masses (M1)
 % When M1 = 50
-[t1,x1]=ode45('case3_M2_is_50',[0 400],[0;0;0;0]);
+[t1,x1]=ode45('case2_M1_is_50',[0 400],[0;0;0;0]);
 % When M1 = 250
-[t2,x2]=ode45('case3_M2_is_250',[0 400],[0;0;0;0]);
+[t2,x2]=ode45('case2_M1_is_250',[0 400],[0;0;0;0]);
 % When M1 = 450
-[t3,x3]=ode45('case3_M2_is_450',[0 400],[0;0;0;0]);
+[t3,x3]=ode45('case2_M1_is_450',[0 400],[0;0;0;0]);
 % When M1 = 650
-[t4,x4]=ode45('case3_M2_is_650',[0 400],[0;0;0;0]);
+[t4,x4]=ode45('case2_M1_is_650',[0 400],[0;0;0;0]);
 figure
 subplot(2,1,1); hold on;
 plot(t1,x1(:,1),'LineWidth',2);
@@ -42,8 +42,8 @@ plot(t2,x2(:,1),'LineWidth',2);
 plot(t3,x3(:,1),'LineWidth',2);
 plot(t4,x4(:,1),'LineWidth',2);
 xlabel('Time(t)'); ylabel('Displacement(xa)');
-title('Spring Mass System (Changing Mass)');
-legend('M2 = 50','M2 = 250','M2 = 450','M2 = 650');
+title('Spring Mass System (Changing Mass M1)');
+legend('M1 = 50','M1 = 250','M1 = 450','M1 = 650');
 grid; hold off;
 
 subplot(2,1,2); hold on
@@ -53,8 +53,8 @@ plot(t3,x3(:,2),'LineWidth',2)
 plot(t4,x4(:,2),'LineWidth',2)
 hold off;
 xlabel('Time(t)'); ylabel('Velocity(va)');
-title('Spring Mass System (Changing Mass)');
-legend('M2 = 50','M2 = 250','M2 = 450','M2 = 650');
+title('Spring Mass System (Changing Mass M1)');
+legend('M1 = 50','M1 = 250','M1 = 450','M1 = 650');
 grid; hold off;
 
 figure
@@ -64,8 +64,8 @@ plot(t2,x2(:,3),'LineWidth',2);
 plot(t3,x3(:,3),'LineWidth',2);
 plot(t4,x4(:,3),'LineWidth',2);
 xlabel('Time(t)'); ylabel('Displacement(xb)');
-title('Spring Mass System (Changing Mass)');
-legend('M2 = 50','M2 = 250','M2 = 450','M2 = 650');
+title('Spring Mass System (Changing Mass M1)');
+legend('M1 = 50','M1 = 250','M1 = 450','M1 = 650');
 grid; hold off;
 
 subplot(2,1,2); hold on
@@ -75,11 +75,11 @@ plot(t3,x3(:,4),'LineWidth',2)
 plot(t4,x4(:,4),'LineWidth',2)
 hold off;
 xlabel('Time(t)'); ylabel('Velocity(vb)');
-title('Spring Mass System (Changing Mass)');
-legend('M2 = 50','M2 = 250','M2 = 450','M2 = 650');
+title('Spring Mass System (Changing Mass M1)');
+legend('M1 = 50','M1 = 250','M1 = 450','M1 = 650');
 grid; hold off;
 
-% Changing value of masses
+% Changing value of masses (M2)
 % When M2 = 50
 [t1,x1]=ode45('case3_M2_is_50',[0 400],[0;0;0;0]);
 % When M2 = 250
@@ -95,7 +95,7 @@ plot(t2,x2(:,1),'LineWidth',2);
 plot(t3,x3(:,1),'LineWidth',2);
 plot(t4,x4(:,1),'LineWidth',2);
 xlabel('Time(t)'); ylabel('Displacement(xa)');
-title('Spring Mass System (Changing Mass)');
+title('Spring Mass System (Changing Mass M2)');
 legend('M2 = 50','M2 = 250','M2 = 450','M2 = 650');
 grid; hold off;
 
@@ -106,7 +106,7 @@ plot(t3,x3(:,2),'LineWidth',2)
 plot(t4,x4(:,2),'LineWidth',2)
 hold off;
 xlabel('Time(t)'); ylabel('Velocity(va)');
-title('Spring Mass System (Changing Mass)');
+title('Spring Mass System (Changing Mass M2)');
 legend('M2 = 50','M2 = 250','M2 = 450','M2 = 650');
 grid; hold off;
 
@@ -117,7 +117,7 @@ plot(t2,x2(:,3),'LineWidth',2);
 plot(t3,x3(:,3),'LineWidth',2);
 plot(t4,x4(:,3),'LineWidth',2);
 xlabel('Time(t)'); ylabel('Displacement(xb)');
-title('Spring Mass System (Changing Mass)');
+title('Spring Mass System (Changing Mass M2)');
 legend('M2 = 50','M2 = 250','M2 = 450','M2 = 650');
 grid; hold off;
 
@@ -128,6 +128,6 @@ plot(t3,x3(:,4),'LineWidth',2)
 plot(t4,x4(:,4),'LineWidth',2)
 hold off;
 xlabel('Time(t)'); ylabel('Velocity(vb)');
-title('Spring Mass System (Changing Mass)');
+title('Spring Mass System (Changing Mass M2)');
 legend('M2 = 50','M2 = 250','M2 = 450','M2 = 650');
 grid; hold off;
